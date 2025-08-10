@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Legal Document Analyzer - Understand Contracts in Plain English</title>
+    <meta name="description" content="Upload any contract or legal document and get instant AI analysis with key clauses, risks, and explanations in simple language. Free legal document review tool.">
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "pdf-lib": "https://cdn.skypack.dev/pdf-lib",
+                "mammoth": "https://cdn.skypack.dev/mammoth"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>LegalAI</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Ad Banner Top -->
+    <div class="ad-banner-top">
+        <div class="ad-placeholder">Advertisement - 728x90</div>
+    </div>
+
+    <main class="main">
+        <!-- Upload Section -->
+        <section class="upload-section" id="upload-section">
+            <div class="container">
+                <div class="hero">
+                    <h2>Free AI Legal Document Analyzer</h2>
+                    <p>Upload any contract or agreement, and our AI will highlight important clauses and explain them in plain English.</p>
+                    
+                    <div class="upload-area">
+                        <div class="upload-box" id="upload-box">
+                            <div class="upload-icon">📄</div>
+                            <h3>Drop your document here</h3>
+                            <p>Supports PDF, DOCX, and TXT files</p>
+                            <button class="upload-btn" id="upload-btn">Choose File</button>
+                            <input type="file" id="file-input" accept=".pdf,.docx,.txt" hidden>
+                        </div>
+                        
+                        <div class="or-divider">
+                            <span>OR</span>
+                        </div>
+                        
+                        <div class="text-input-area">
+                            <textarea id="text-input" placeholder="Paste your legal document text here..." rows="8"></textarea>
+                            <button class="analyze-btn" id="analyze-text-btn">Analyze Text</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processing Section -->
+        <section class="processing-section hidden" id="processing-section">
+            <div class="container">
+                <div class="processing-content">
+                    <div class="loading-spinner"></div>
+                    <h3>Analyzing your document...</h3>
+                    <p class="processing-step">Extracting text from document</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section hidden" id="results-section">
+            <div class="container">
+                <div class="results-header">
+                    <h2>Document Analysis Complete</h2>
+                    <button class="download-btn" id="download-btn">Download Report as PDF</button>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="analysis-panel">
+                        <div class="panel-header">
+                            <h3>🔍 Legal Analysis</h3>
+                        </div>
+                        <div class="panel-content" id="legal-analysis">
+                            <!-- Legal analysis content -->
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar Ad -->
+                    <div class="ad-sidebar">
+                        <div class="ad-placeholder">Advertisement - 300x250</div>
+                    </div>
+                    
+                    <div class="explanation-panel">
+                        <div class="panel-header">
+                            <h3>💡 Plain English Explanation</h3>
+                        </div>
+                        <div class="panel-content" id="plain-explanation">
+                            <!-- Plain explanation content -->
+                        </div>
+                    </div>
+                    
+                    <div class="ad-sidebar-bottom">
+                        <div class="ad-placeholder">Advertisement - 300x600</div>
+                    </div>
+                </div>
+                
+                <div class="analysis-actions">
+                    <button class="new-analysis-btn" id="new-analysis-btn">Analyze Another Document</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Upload Document</h3>
+                        <p>Upload your legal document (PDF, DOCX, or TXT) or paste the text directly</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>AI Analysis</h3>
+                        <p>Our advanced AI analyzes the document for key clauses, risks, and important terms</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Get Results</h3>
+                        <p>Receive detailed analysis alongside plain English explanations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>LegalAI</h3>
+                    <p>Making legal documents understandable for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms & Conditions</a>
+                        <a href="/disclaimer">Disclaimer</a>
+                        <a href="/dmca">DMCA</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="/about">About Us</a>
+                        <a href="/contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LegalAI. This tool provides AI analysis only and does not constitute legal advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
